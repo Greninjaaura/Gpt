@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding in Space</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.2/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -13,18 +17,34 @@
             color: #FFFFFF;
         }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
-
-        #info-icon, #search-icon, #account-icon {
+        .new-code-icon {
+            position: fixed;
+            top: 10px;
+            left: 10px;
             width: 30px;
             height: 30px;
-            margin: 0 10px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
+        }
+
+        .code-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #808080;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: monospace;
+            font-size: 15px;
+            color: #FFFFFF;
+            position: fixed;
+            top: 10px;
+            right: 10px;
         }
 
         #coding-box {
@@ -40,8 +60,13 @@
 
         /* Scroll animation for coding information boxes */
         @keyframes scrollBackground {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
         }
 
         .scrolling-box {
@@ -51,16 +76,18 @@
             animation: scrollBackground 10s linear infinite;
         }
     </style>
-</head>
-<body>
 
-    <header>
-        <img id="info-icon" src="info-icon.png" alt="Info Icon">
-        <div>
-            <img id="search-icon" src="search-icon.png" alt="Search Icon">
-            <img id="account-icon" src="account-icon.png" alt="Account Icon">
-        </div>
-    </header>
+    <script>
+        // Your JavaScript functions and data here...
+    </script>
+</head>
+
+<body>
+    <!-- New code icon -->
+    <div class="new-code-icon">&#60;/&#62;</div>
+
+    <!-- Button with the code icon to open the modal -->
+    <button class="code-button" onclick="openModal()"><i class="fa fa-info-circle"></i></button>
 
     <div id="coding-box">
         <!-- Add your coding information here in separate boxes -->
@@ -74,5 +101,19 @@
         <p>About the Website, Owner, and Social Media Channels</p>
     </div>
 
+    <div id="search-results"></div>
+
+    <!-- Modal overlay and content -->
+    <div id="modal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal(event)">X</span>
+            <div class="modal-header">
+                <h2><img class="news-icon" src="news.png" alt="News Icon">News</h2>
+            </div>
+            <p>Latest updates are <br>1) set up of modal is completed</p>
+        </div>
+    </div>
+
 </body>
+
 </html>
