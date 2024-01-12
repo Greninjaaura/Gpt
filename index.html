@@ -75,21 +75,78 @@
             background: linear-gradient(to right, #0288D1, #00B0FF); /* Gradient background for scrolling boxes */
             animation: scrollBackground 10s linear infinite;
         }
+
+        /* Modal styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 75%;
+            height: 145%;
+            max-width: 80%;
+            max-height: 60vh;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #808080;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            position: relative;
+            animation: fadeIn 0.3s ease;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* Example of fadeIn animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 
     <script>
-        // Your JavaScript functions and data here...
         function openModal() {
-      var modal = document.getElementById("modal");
-      modal.style.display = "flex";
-      modal.querySelector('.modal-content').focus();
-    }
+            var modal = document.getElementById("modal");
+            modal.style.display = "block";
+            modal.querySelector('.modal-content').focus();
+        }
 
-    function closeModal(event) {
-      if (event.target.classList.contains('close-button')) {
-        document.getElementById("modal").style.display = "none";
-      }
-    }
+        function closeModal(event) {
+            if (event.target.classList.contains('close-button')) {
+                document.getElementById("modal").style.display = "none";
+            }
+        }
     </script>
 </head>
 
