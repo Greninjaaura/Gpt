@@ -79,6 +79,17 @@
 
     <script>
         // Your JavaScript functions and data here...
+        function openModal() {
+      var modal = document.getElementById("modal");
+      modal.style.display = "flex";
+      modal.querySelector('.modal-content').focus();
+    }
+
+    function closeModal(event) {
+      if (event.target.classList.contains('close-button')) {
+        document.getElementById("modal").style.display = "none";
+      }
+    }
     </script>
 </head>
 
