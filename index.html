@@ -185,6 +185,11 @@
     </style>
 
     <script>
+        // Function to open ChatGPT website
+        function openChatGPTWebsite() {
+            window.open('https://www.chatgpt.com', '_blank');
+        }
+        
         function openModal() {
             var modal = document.getElementById("modal");
             modal.style.display = "block";
@@ -220,7 +225,8 @@
 
 <script src="script.js"></script>
         <!-- Add your coding information here in separate boxes -->
-        <div class="scrolling-box">Coding Info 1</div>
+        <!-- Button to open ChatGPT website -->
+        <button class="scrolling-box" onclick="openChatGPTWebsite()">Chatgpt</button>
         <div class="scrolling-box">Coding Info 2</div>
         <!-- Add more boxes as needed -->
     </div>
