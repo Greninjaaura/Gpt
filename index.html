@@ -9,6 +9,43 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.2/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        #search-container {
+      position: relative;
+      display: flex;
+      margin-bottom: 15px;
+      align-items: center;
+    }
+
+    #search-input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 20px; /* Capsule shape */
+    }
+
+    #search-container button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px;
+    background-color: transparent; /* Remove background color */
+    color: #888; /* Set text color to gray */
+    border: none;
+    cursor: pointer;
+  }
+
+  #search-container button:hover {
+    background-color: transparent; /* No background color on hover */
+  }
+
+    #search-results {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0); /* Initial transparency */
+    transition: background-color 0.3s ease; /* Smooth transition for visibility */
+  }
+        
         body {
             margin: 0;
             padding: 0;
@@ -168,6 +205,16 @@
 
     <div id="coding-box">
         <p style="font-size: 25px;">Learn Coding</p>
+        <div id="search-container">
+  <input type="text" id="search-input" placeholder="Search...">
+  <button onclick="search()"><i class="fas fa-search"></i></button> <!-- Blue circular magnifying glass icon -->
+</div>
+
+<div id="search-results">
+  <!-- Search results will be inserted here -->
+</div>
+
+<script src="script.js"></script>
         <!-- Add your coding information here in separate boxes -->
         <div class="scrolling-box">Coding Info 1</div>
         <div class="scrolling-box">Coding Info 2</div>
