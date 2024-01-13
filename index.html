@@ -7,7 +7,8 @@
     <title>Coding in Space</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.2/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
     <style>
         #search-container {
       position: relative;
@@ -149,6 +150,19 @@
         color: #000; /* Adjusted text color for better visibility */
     }
 
+        #chatGPTIcon {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  cursor: move;
+}
+
+.draggable {
+  user-drag: element;
+  user-select: none;
+}
+
+
     .close-button {
         position: absolute;
         top: 20px;
@@ -199,6 +213,9 @@
 </head>
 
 <body>
+    <div id="chatGPTIcon" class="draggable">
+  <!-- Your ChatGPT icon goes here -->
+  <img src="chatgpt_icon.png" alt="ChatGPT Icon">
     <p style="font-size: 22px; text-align: center; margin-top: 10px;">CODE</p>
     <!-- New code icon -->
     <div class="new-code-icon">&#60;/&#62;</div>
