@@ -1,7 +1,17 @@
 // Sample data for search results
 const searchData = [
-    { title: 'ChatGPT', description: 'ChatGPT is a conversational language model...', link: 'https://www.chatgpt.com' },
-    { title: 'Web development', description: 'Web development involves creating and maintaining websites...', link: '#' },
+    { title: 'ChatGPT', description: 'ChatGPT is a conversational language model developed by OpenAI, operating on the GPT-3.5 architecture. It generates text responses based on user inputs, trained...', link: 'https://www.chatgpt.com' },
+    { title: 'Web development', description: 'Web development involves creating and maintaining websites. Key points include front-end (user interface), back-end (server-side logic), and database management...', link: '#' },
+    { title: 'Web development', description: ' ', link: '#' },
+    { title: 'Web development', description: ' ', link: '#' },
+    { title: 'Web development', description: ' ', link: '#' },
+    { title: 'Web development', description: ' ', link: '#' },
+    { title: 'Web development', description: ' ', link: '#' },
+    { title: 'Web development', description: ' ', link: '#' },
+    { title: 'Web development', description: ' ', link: '#' },
+    { title: 'Web development', description: ' ', link: '#' },
+    { title: 'Web development', description: ' ', link: '#' },
+    { title: 'Web development', description: ' ', link: '#' },
     // Add more objects as needed
 ];
 
